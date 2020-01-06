@@ -180,6 +180,6 @@ Displaying temperature works the same as displaying minutes - for now only posit
 
 * **Marijo Blazevic**
   
-  ## License
+ ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+The hardware and software designe is released under CC-SA v3 license [https://creativecommons.org/licenses/by-sa/3.0/us/].
