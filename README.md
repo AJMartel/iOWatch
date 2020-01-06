@@ -1,9 +1,14 @@
-# watch
+# iO watch
 
-The main function of this program is to use the full potential of extremely accurate DS3231 (with temperature compensation) timekeeping sensor
-  and show us that time precise! 
+This is a simple jet powerful digital wristwatch. The heart of this watch is the much-respected ATMega328 using a precise RTC clock-source to keep the time. To check the time, just press one of the two buttons on the side, and the time will shows up on a twelve LED’s shaped like a classic analog watch face. While designing this watch my two top priorities were to make this watch look nice and compact while still being easy to solder and assemble, making it available to both beginners and experienced folks. With some optimization, the watch is running at really low power which means you should get around 1 year of run time on a single CR2032 coin cell!
+
+For full guide visit this [link](http://mblazevic.com/iowatch-preparation/).
+
+The main function of this demo program is to use the full potential of extremely accurate DS3231 (with temperature compensation) timekeeping sensor.
+
+## DEMO code features
  
-## [Short Press] displaying time
+### [Short Press] displaying time
  
   The Watch is designed with 12LED's positioned in Circle-like so
  
@@ -58,7 +63,7 @@ The main function of this program is to use the full potential of extremely accu
              
   4. Deep sleep
  
- ### Example
+ #### Example
  
   If it's 10:23 - Pressing the button wakes the device up, reads the time. Reading the time takes three steps
   First, hours are shown so the 10'Led light up [10:--]
@@ -80,7 +85,7 @@ The main function of this program is to use the full potential of extremely accu
 
 In the third and final step, the rest of the minutes raging from 0 - 4 are displayed, so if 23-20 = 3 the third LED will light up [10:23].
  
-## [Double Press] displaying temperature in *C
+### [Double Press] displaying temperature in *C
  
  
 Displaying temperature works the same as displaying minutes - for now only positive +0*C temperatures are displayed
@@ -115,7 +120,7 @@ Displaying temperature works the same as displaying minutes - for now only posit
                            \-.______.-/
                             |________|
  
-### Example
+#### Example
  
    17* C
  
@@ -156,7 +161,7 @@ Displaying temperature works the same as displaying minutes - for now only posit
  
   At the end 15*C+2*C equals 17*C
  
-## [Long Press] time setting mode
+### [Long Press] time setting mode
   
   Holding the button 3+ seconds activates the time setting mode, time setting mode consists of 3 menus, short pressing the button scrolls the time and long-pressing the button goes through menus.
   To set the time press and hold the button for more than 3 seconds, once the 12'o clock LED lights up that means you entered MENU 1 in witch you select hours, short pressing the button you scroll trough the hours
@@ -176,6 +181,10 @@ Displaying temperature works the same as displaying minutes - for now only posit
   Atmega328 microcontroller with 8Mhz oscillator clocked at 1Mhz
   DS3231 real-time clock
   CR2032 3V 225mAh battery
+  
+  For full guide on how to upload the code to the iO watch visit this [link](http://mblazevic.com/iowatch-preparation/).
+  
+  
   ## Authors
 
 * **Marijo Blazevic**
