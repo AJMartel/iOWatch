@@ -162,9 +162,6 @@ void singleclick2(){   //single Click button
     allOff();         //turning all LED's off
 
     digitalWrite(userLed, HIGH);
-    
-    unsigned int DelayTemperatureLedON = 150;     // how long will minutes LED light up after getting time in microseconds
-    unsigned int DelayTemperatureLedOFF = 280;    // how long will minutes LED stay off after showing time in microseconds
       
     temperatures = rtc.getTemperature();
     temperaturesOnFive = temperatures / 5;
