@@ -47,13 +47,12 @@ void setup () {
   for (int i=0; i<LEDS_SIZE; i++){
     pinMode(leds[i], OUTPUT);             // assigning all pins in array as output
   }
+  pinMode(userLed, OUTPUT);             // assigning all pins in array as output
 
   allOn();          //bootup all LED's turning
   allOff();         //turning all LED's off
 
   delay(40);
-
-  pinMode(userLed, OUTPUT);             // assigning all pins in array as output
 
   attachInterrupt(0, wakeFunction, FALLING);        //interrupt for waking up
   attachInterrupt(1, wakeFunction, FALLING);        //interrupt for waking up
