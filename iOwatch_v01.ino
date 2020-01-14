@@ -22,7 +22,8 @@ byte settingHours = 0;               // variable initialization
 byte settingMinutes = 0;             // variable initialization
 byte settingMinutesToFive = 0;       // variable initialization
 
-const byte leds[24] = {10, A0, A1, A2, A3, 13, 4, 5, 6, 7, 8, 9};  // 12 LED's array pin assigning
+const byte leds[] = {10, A0, A1, A2, A3, 13, 4, 5, 6, 7, 8, 9};  // 12 LED's array pin assigning
+const byte LEDS_SIZE = sizeof(leds)/sizeof(leds[0]);
 
 static byte buttonPin = 2;                           // assigning button pin value
 static byte buttonPin2 = 3;                           // assigning button pin value
@@ -43,7 +44,7 @@ void setup () {
   //rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));    // following line sets the RTC to the date & time this sketch was compiled
   rtc.adjust(DateTime(2019, 1, 1, 0, 0, 0));           //year, month, day, hour, minute, second
 
-  for (int i=0; i<=12; i++){
+  for (int i=0; i<LEDS_SIZE; i++){
     pinMode(leds[i], OUTPUT);             // assigning all pins in array as output
   }
 
@@ -269,14 +270,14 @@ void longclick(){         //longclick function for time setting
 }
 
 void allOff(){
-  for (int i=0; i<=12; i++){
+  for (int i=0; i<LEDS_SIZE; i++){
     digitalWrite(leds[i], LOW);       //turning all LED's off
   }
   digitalWrite(userLed, LOW);
 }
 
 void allOn(){         //function turning all LED's on in specific pattern
-   for (int i=0; i<=12; i++){
+   for (int i=0; i<LEDS_SIZE; i++){
     digitalWrite(leds[i], HIGH);       //turning all LED's off
     delay(100);
   }  
